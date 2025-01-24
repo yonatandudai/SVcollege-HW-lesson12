@@ -7,7 +7,6 @@ const port = 3000;
 app.use(cors());
 app.use(Express.json());
 
-
 mongoose.connect('mongodb+srv://yonatandu:LGl7HEVXhQJaTqiP@cluster0.bhjh4.mongodb.net/sv-test')
 .then(() => {
     console.log('Connected to MongoDB');
@@ -25,7 +24,6 @@ const employeeSchema = new mongoose.Schema({
 });
 
 const employeeModel = mongoose.model('employees', employeeSchema);
-
 
 app.post('/addEmployee', async (req, res) => {
     try { // add employee to the database
